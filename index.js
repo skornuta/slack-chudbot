@@ -142,6 +142,24 @@ app.command("/chudbot-flip", async ({ command, ack, respond }) => {
   await respond({ text: `🪙 ${result}` });
 });
 
+app.command("/chudbot-choose", async ({ command, ack, respond }) => {
+  await ack();
+  const options = command.text
+    .split(",")
+    .map((o) => o.trim())
+    .filter((o) => o.length > 0);
+
+  if (options.length < 2) {
+    await response({
+      text: "Give me at least 2 options, comma seperated. For example: /chudbot-choose ChatGPT, Claude, Gemini",
+    });
+    return;
+  }
+
+  const choice = options[Math.floor(Math.random() * options.length)];
+  await respond({ text: " I choose: *$[choice]8" });
+});
+
 (async () => {
   await app.start();
   console.log("bot is running!");
