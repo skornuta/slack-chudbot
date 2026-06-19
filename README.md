@@ -2,7 +2,8 @@
 
 A Slack bot built for the **Stardance Hack Club** workspace. Handles fun utility commands — countdowns to events, random pairings, dice rolls, quotes, and more.
 
-Built with [Slack Bolt for Node.js](https://slack.dev/bolt-js/) using Socket Mode, so no public URL or reverse proxy is needed.
+Built with [Slack Bolt for Node.js](https://slack.dev/bolt-js/) using Socket Mode, so no public URL or reverse proxy is needed.\
+My original Discord ChudBot is not currently published, because I am still working on it. This is just a simpler version of him. 
 
 > **Note:** This README was polished with AI assistance. A few of the slash command handlers also had syntax issues on the first try — AI helped debug and fix those.
 
