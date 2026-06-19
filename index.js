@@ -150,14 +150,14 @@ app.command("/chudbot-choose", async ({ command, ack, respond }) => {
     .filter((o) => o.length > 0);
 
   if (options.length < 2) {
-    await response({
-      text: "Give me at least 2 options, comma seperated. For example: /chudbot-choose ChatGPT, Claude, Gemini",
+    await respond({
+      text: "Give me at least 2 options, comma separated. For example: /chudbot-choose ChatGPT, Claude, Gemini",
     });
     return;
   }
 
   const choice = options[Math.floor(Math.random() * options.length)];
-  await respond({ text: " I choose: *$[choice]8" });
+  await respond({ text: `I choose: *${choice}*` });
 });
 
 (async () => {
